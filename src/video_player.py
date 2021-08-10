@@ -282,10 +282,6 @@ class VideoPlayer:
                 self.play_video(matching_videos[int_video_number-1].video_id)
         except ValueError:
             return
-        # if type(video_number) != int or video_number > len(matching_videos):
-        #     return
-
-        # self.play_video(matching_videos[i-1].video_id)
 
     def search_videos_tag(self, video_tag):
         """Display all videos whose tags contains the provided tag.
@@ -316,8 +312,6 @@ class VideoPlayer:
         print("Would you like to play any of the above? If yes, specify the number of the video.\nIf your answer is not a valid number, we will assume it's a no.")
         video_number = input()
 
-        # print(video_number)
-
         try:
             int_video_number = int(video_number)
             if int_video_number > len(matching_videos) or int_video_number < 0:
@@ -335,6 +329,7 @@ class VideoPlayer:
             flag_reason: Reason for flagging the video.
         """
         print("flag_video needs implementation")
+
 
     def allow_video(self, video_id):
         """Removes a flag from a video.
